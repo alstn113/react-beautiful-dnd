@@ -1,6 +1,6 @@
-import { IInitialData } from "./types";
+import { ITaskList } from "./types";
 
-const initialData: IInitialData = {
+const initialData: ITaskList = {
   tasks: {
     "task-1": { id: "task-1", content: "밥먹기" },
     "task-2": { id: "task-2", content: "운동하기" },
@@ -39,7 +39,6 @@ const initialData: IInitialData = {
       taskIds: [],
     },
   },
-  // column을 순서대로 map으로 뿌리기 위해서 만들어줌
   columnOrder: ["column-1", "column-2", "column-3"],
 };
 

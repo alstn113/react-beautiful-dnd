@@ -9,7 +9,7 @@ export interface ITask {
   content: string;
 }
 
-export interface IInitialData {
+export interface ITaskList {
   tasks: {
     [key: string]: ITask;
   };

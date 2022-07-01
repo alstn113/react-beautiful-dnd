@@ -45,10 +45,10 @@ const Container = styled.div<{ isDragging: boolean; isDragDisabled: boolean }>`
 `;
 
 const Handle = styled.div`
-  height: 1rem;
+  height: 0.5rem;
   width: 100%;
   background: rgb(228, 143, 143);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 `;
 
 export default Task;
