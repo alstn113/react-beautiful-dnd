@@ -4,7 +4,7 @@ import { Draggable } from "react-beautiful-dnd";
 
 interface Props {
   task: ITask;
-  index: any;
+  index: number;
 }
 
 const Task = ({ task, index }: Props) => {

@@ -41,6 +41,9 @@ const Container = styled.div`
 
 const Title = styled.h3`
   padding: 8px;
+  margin: 8px;
+  text-align: center;
+  background: #9dd2ea;
 `;
 
 const TaskList = styled.div<{ isDraggingOver: boolean }>`
