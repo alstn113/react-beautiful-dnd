@@ -1,12 +1,12 @@
-import { useState } from "react";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import Column from "../components/Column";
-import initialData from "../initial-data";
 import { IColumn, ITaskList, ITask } from "../types";
 import styled from "styled-components";
+import { useRecoilState } from "recoil";
+import taskListAtom from "../recoil/taskList/atom";
 
 function TaskListPage() {
-  const [state, setState] = useState<ITaskList>(initialData);
+  const [state, setState] = useRecoilState(taskListAtom);
 
   const onDragEnd = (result: DropResult) => {
     const { destination, source, draggableId } = result;
