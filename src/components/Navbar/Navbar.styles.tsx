@@ -1,21 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  return (
-    <Nav>
-      <NavbarContainer>
-        <MenuLink to="/">Home</MenuLink>
-        <MenuLink to="/task-list">Task List</MenuLink>
-        <MenuLink to="/model-view">Model View</MenuLink>
-      </NavbarContainer>
-    </Nav>
-  );
-};
-
-const Nav = styled("nav")`
+export const Nav = styled("nav")`
   font-size: 18px;
-  position: sticky;
   top: 0;
   z-index: 999;
   height: 80px;
@@ -25,7 +12,7 @@ const Nav = styled("nav")`
   justify-content: center;
   align-items: center;
 `;
-const NavbarContainer = styled("div")`
+export const NavbarContainer = styled("div")`
   margin: 0 auto;
   padding: 0 50px;
   max-width: 1300px;
@@ -35,7 +22,7 @@ const NavbarContainer = styled("div")`
   align-items: center;
   height: 80px;
 `;
-const MenuLink = styled(Link)`
+export const MenuLink = styled(Link)`
   text-decoration: none;
   font-weight: bold;
   font-size: 2rem;
@@ -56,5 +43,3 @@ const MenuLink = styled(Link)`
     color: #e38b06;
   }
 `;
-
-export default Navbar;

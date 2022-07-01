@@ -1,9 +1,9 @@
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import Column from "../components/Column";
-import { IColumn, ITaskList, ITask } from "../types";
-import styled from "styled-components";
+import Column from "../../components/Column/Column";
+import { IColumn, ITaskList, ITask } from "../../types";
 import { useRecoilState } from "recoil";
-import taskListAtom from "../recoil/taskList/atom";
+import taskListAtom from "../../recoil/taskList/atom";
+import * as S from "./TaskListPage.styles";
 
 function TaskListPage() {
   const [state, setState] = useRecoilState(taskListAtom);
@@ -76,7 +76,7 @@ function TaskListPage() {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <Container>
+      <S.Container>
         {state.columnOrder.map((columnId) => {
           const column: IColumn = state.columns[columnId];
           const tasks: ITask[] = column.taskIds.map(
@@ -85,14 +85,9 @@ function TaskListPage() {
 
           return <Column key={column.id} column={column} tasks={tasks} />;
         })}
-      </Container>
+      </S.Container>
     </DragDropContext>
   );
 }
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-`;
 
 export default TaskListPage;
