@@ -1,5 +1,5 @@
-import * as S from "./Column.styles";
-import Task from "../Task/Task";
+import * as S from "./styles";
+import Task from "../Task";
 import { IColumn, ITask } from "../../types";
 import { Droppable } from "react-beautiful-dnd";
 

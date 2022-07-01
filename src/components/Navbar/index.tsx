@@ -1,4 +1,4 @@
-import * as S from "./Navbar.styles";
+import * as S from "./styles";
 
 const Navbar = () => {
   return (

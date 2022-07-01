@@ -1,5 +1,5 @@
 import { ITask } from "../../types";
-import * as S from "./Task.styles";
+import * as S from "./styles";
 import { Draggable } from "react-beautiful-dnd";
 
 interface Props {

@@ -1,9 +1,9 @@
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import Column from "../../components/Column/Column";
+import Column from "../../components/Column";
 import { IColumn, ITaskList, ITask } from "../../types";
 import { useRecoilState } from "recoil";
-import taskListAtom from "../../recoil/taskList/atom";
-import * as S from "./TaskListPage.styles";
+import taskListAtom from "../../store/taskList/atom";
+import * as S from "./styles";
 
 function TaskListPage() {
   const [state, setState] = useRecoilState(taskListAtom);

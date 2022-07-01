@@ -1,6 +1,6 @@
 import { useRecoilValue } from "recoil";
-import * as S from "./ModelViewPage.styled";
-import taskListAtom from "../../recoil/taskList/atom";
+import * as S from "./styles";
+import taskListAtom from "../../store/taskList/atom";
 
 const ModelViewPage = () => {
   const taskList = useRecoilValue(taskListAtom);
