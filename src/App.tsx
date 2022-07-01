@@ -1,17 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import HomePage from "./pages/HomePage";
-import ModelViewPage from "./pages/ModelViewPage";
-import TaskListPage from "./pages/TaskListPage";
+import Home from "./pages/Home";
+import ModelView from "./pages/ModelView";
+import TaskList from "./pages/TaskList";
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/task-list" element={<TaskListPage />} />
-        <Route path="/model-view" element={<ModelViewPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/task-list" element={<TaskList />} />
+        <Route path="/model-view" element={<ModelView />} />
       </Routes>
     </>
   );

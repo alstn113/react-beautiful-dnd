@@ -5,7 +5,7 @@ import { useRecoilState } from "recoil";
 import taskListAtom from "../../store/taskList/atom";
 import * as S from "./styles";
 
-function TaskListPage() {
+function TaskList() {
   const [state, setState] = useRecoilState(taskListAtom);
 
   const onDragEnd = (result: DropResult) => {
@@ -90,4 +90,4 @@ function TaskListPage() {
   );
 }
 
-export default TaskListPage;
+export default TaskList;

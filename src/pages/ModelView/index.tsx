@@ -2,7 +2,7 @@ import { useRecoilValue } from "recoil";
 import * as S from "./styles";
 import taskListAtom from "../../store/taskList/atom";
 
-const ModelViewPage = () => {
+const ModelView = () => {
   const taskList = useRecoilValue(taskListAtom);
   return (
     <S.Container>
@@ -15,4 +15,4 @@ const ModelViewPage = () => {
   );
 };
 
-export default ModelViewPage;
+export default ModelView;
