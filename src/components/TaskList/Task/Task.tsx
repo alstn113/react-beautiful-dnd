@@ -1,5 +1,5 @@
-import { ITask } from "../../types";
-import * as S from "./styles";
+import { ITask } from "../../../types";
+import { Container, Handle } from "./Task.styles";
 import { Draggable } from "react-beautiful-dnd";
 
 interface Props {
@@ -15,16 +15,15 @@ const Task = ({ task, index }: Props) => {
       isDragDisabled={task.id === "task-1"}
     >
       {(provided, snapshot) => (
-        <S.Container
+        <Container
           {...provided.draggableProps}
-          // {...provided.dragHandleProps}
           ref={provided.innerRef}
           isDragging={snapshot.isDragging}
           isDragDisabled={task.id === "task-1"}
         >
-          <S.Handle {...provided.dragHandleProps} />
+          <Handle {...provided.dragHandleProps} />
           {task.content}
-        </S.Container>
+        </Container>
       )}
     </Draggable>
   );

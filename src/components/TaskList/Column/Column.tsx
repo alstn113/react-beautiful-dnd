@@ -1,6 +1,6 @@
-import * as S from "./styles";
-import Task from "../Task";
-import { IColumn, ITask } from "../../types";
+import { Container, TaskList, Title } from "./Column.styles";
+import Task from "../Task/Task";
+import { IColumn, ITask } from "../../../types";
 import { Droppable } from "react-beautiful-dnd";
 
 interface Props {
@@ -10,11 +10,11 @@ interface Props {
 
 const Column = ({ column, tasks }: Props) => {
   return (
-    <S.Container>
-      <S.Title>{column.title}</S.Title>
+    <Container>
+      <Title>{column.title}</Title>
       <Droppable droppableId={column.id}>
         {(provided, snapshot) => (
-          <S.TaskList
+          <TaskList
             {...provided.droppableProps}
             ref={provided.innerRef}
             isDraggingOver={snapshot.isDraggingOver}
@@ -23,10 +23,10 @@ const Column = ({ column, tasks }: Props) => {
               <Task key={task.id} task={task} index={index} />
             ))}
             {provided.placeholder}
-          </S.TaskList>
+          </TaskList>
         )}
       </Droppable>
-    </S.Container>
+    </Container>
   );
 };
 

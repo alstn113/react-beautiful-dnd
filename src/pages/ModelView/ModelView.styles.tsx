@@ -5,6 +5,6 @@ export const Container = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 `;

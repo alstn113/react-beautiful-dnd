@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Handle = styled.div`
+  height: 0.5rem;
+  width: 100%;
+  background: rgb(228, 143, 143);
+  margin-bottom: 0.5rem;
+`;
+
 export const Container = styled.div<{
   isDragging: boolean;
   isDragDisabled: boolean;
@@ -15,11 +22,4 @@ export const Container = styled.div<{
       : props.isDragging
       ? "lightgreen"
       : "white"};
-`;
-
-export const Handle = styled.div`
-  height: 0.5rem;
-  width: 100%;
-  background: rgb(228, 143, 143);
-  margin-bottom: 0.5rem;
 `;

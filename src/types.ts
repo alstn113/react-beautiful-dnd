@@ -18,3 +18,16 @@ export interface ITaskList {
   };
   columnOrder: string[];
 }
+
+export interface IFormItem {
+  id: string;
+  content: string;
+}
+
+export interface IWAF {
+  title: string;
+  formItems: {
+    [key: string]: IFormItem;
+  };
+  formItemIds: string[];
+}

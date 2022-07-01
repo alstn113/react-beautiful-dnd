@@ -1,9 +1,9 @@
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import Column from "../../components/Column";
+import Column from "../../components/TaskList/Column/Column";
 import { IColumn, ITaskList, ITask } from "../../types";
 import { useRecoilState } from "recoil";
 import taskListAtom from "../../store/taskList/atom";
-import * as S from "./styles";
+import { Container } from "./TaskList.styles";
 
 function TaskList() {
   const [state, setState] = useRecoilState(taskListAtom);
@@ -25,6 +25,7 @@ function TaskList() {
     const start = state.columns[source.droppableId];
     const finish = state.columns[destination.droppableId];
 
+    // same column
     if (start === finish) {
       const newTaskIds = Array.from(start.taskIds);
 
@@ -48,6 +49,7 @@ function TaskList() {
       return;
     }
 
+    // different column
     const startTaskIds = Array.from(start.taskIds);
     startTaskIds.splice(source.index, 1);
     const newStart: IColumn = {
@@ -76,7 +78,7 @@ function TaskList() {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <S.Container>
+      <Container>
         {state.columnOrder.map((columnId) => {
           const column: IColumn = state.columns[columnId];
           const tasks: ITask[] = column.taskIds.map(
@@ -85,7 +87,7 @@ function TaskList() {
 
           return <Column key={column.id} column={column} tasks={tasks} />;
         })}
-      </S.Container>
+      </Container>
     </DragDropContext>
   );
 }

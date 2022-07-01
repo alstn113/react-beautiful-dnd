@@ -22,3 +22,5 @@ React.StrictMode에서는 적용이 안됨
 
       yarn add recoil
       yarn add react-router-dom
+
+disableInteractiveElementBlocking 다른 column으로는 안됨
