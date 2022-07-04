@@ -3,19 +3,19 @@ const DropdonwForm = () => {
     <div>
       <div>드롭다운</div>
       <div>
-        <input type="text" value="옵션 1" />
+        <input type="text" placeholder="옵션 1" />
       </div>
       <div>
-        <input type="text" value="옵션 2" />
+        <input type="text" placeholder="옵션 2" />
       </div>
       <div>
-        <input type="text" value="옵션 3" />
+        <input type="text" placeholder="옵션 3" />
       </div>
       <div>
-        <input type="text" value="옵션 4" />
+        <input type="text" placeholder="옵션 4" />
       </div>
       <div>
-        <input type="text" value="기타..." />
+        <input type="text" placeholder="기타..." />
       </div>
     </div>
   );
