@@ -1,9 +1,9 @@
-import { IFormItem } from "../../../types";
+import { IWAFItem } from "../../../types";
 import { Draggable } from "react-beautiful-dnd";
 import { Container, Handle } from "./FormItem.styles";
 
 interface Props {
-  formItem: IFormItem;
+  formItem: IWAFItem;
   index: number;
 }
 

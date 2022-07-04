@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface IColumn {
   id: string;
   title: string;
@@ -24,10 +26,14 @@ export interface IFormItem {
   content: string;
 }
 
+export interface IWAFItem {
+  id: string;
+  content: React.ReactNode;
+}
+
 export interface IWAF {
-  title: string;
   formItems: {
-    [key: string]: IFormItem;
+    [key: string]: IWAFItem;
   };
   formItemIds: string[];
 }

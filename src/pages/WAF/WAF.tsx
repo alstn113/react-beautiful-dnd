@@ -8,6 +8,21 @@ import { Container, FormListContainer, Title, Wrapper } from "./WAF.styles";
 const WAF = () => {
   const [state, setState] = useRecoilState(WAFAtom);
 
+  const onCreate = () => {
+    const formId = `form-${Math.random()}`;
+    const newFormItemIds = [formId, ...state.formItemIds];
+    const newFormItems = {
+      ...state.formItems,
+      [formId]: { id: formId, content: formId },
+    };
+    const newState = {
+      ...state,
+      formItems: newFormItems,
+      formItemIds: newFormItemIds,
+    };
+
+    setState(newState);
+  };
   const onDragEnd = (result: DropResult) => {
     const { destination, source, draggableId } = result;
 
@@ -38,6 +53,7 @@ const WAF = () => {
       <Container>
         <Wrapper>
           <Title>WAF</Title>
+          <button onClick={onCreate}>생성</button>
           <Droppable droppableId="form-list">
             {(provided, snapshot) => (
               <FormListContainer
