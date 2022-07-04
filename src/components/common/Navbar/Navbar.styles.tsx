@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Nav = styled("nav")`
   font-size: 18px;
+  width: 100%;
   top: 0;
   z-index: 999;
   height: 80px;
@@ -14,8 +15,6 @@ export const Nav = styled("nav")`
 `;
 export const NavbarContainer = styled("div")`
   margin: 0 auto;
-  padding: 0 50px;
-  max-width: 1300px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -25,21 +24,16 @@ export const NavbarContainer = styled("div")`
 export const MenuLink = styled(Link)`
   text-decoration: none;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1rem;
+  padding: 1rem 0.5rem;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   height: 100%;
   transition: all 0.2s ease;
 
   &:hover {
-    color: #e38b06;
-    transform: traslateY(-3rem);
-  }
-  &:active {
-    transform: traslateY(3rem);
-    color: #e38b06;
+    color: #4ac7d2;
   }
 `;

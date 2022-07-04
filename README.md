@@ -1,3 +1,5 @@
+# WAF 만들기 위한 TEST
+
 #### react-beautiful-dnd를 hook과 typescript로 이용한 예제
 
       yarn create vite
@@ -23,4 +25,4 @@ React.StrictMode에서는 적용이 안됨
       yarn add recoil
       yarn add react-router-dom
 
-disableInteractiveElementBlocking 다른 column으로는 안됨
+참고 : disableInteractiveElementBlocking 다른 column으로는 안됨
