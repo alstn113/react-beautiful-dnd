@@ -55,9 +55,6 @@ const WAF = () => {
                     />
                   );
                 })}
-                {/* {tasks.map((task, index) => (
-                <Task key={task.id} task={task} index={index} />
-              ))} */}
                 {provided.placeholder}
               </FormListContainer>
             )}
