@@ -1,12 +1,12 @@
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import Column from "../../components/TaskList/Column/Column";
+import useTaskListStore from "../../store/useTaskListStore";
 import { IColumn, ITaskList, ITask } from "../../types";
-import { useRecoilState } from "recoil";
-import taskListAtom from "../../store/taskList/atom";
+
 import { Container } from "./TaskList.styles";
 
 function TaskList() {
-  const [state, setState] = useRecoilState(taskListAtom);
+  const { setState, ...state } = useTaskListStore();
 
   const onDragEnd = (result: DropResult) => {
     const { destination, source, draggableId } = result;

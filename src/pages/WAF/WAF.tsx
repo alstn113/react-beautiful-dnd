@@ -1,12 +1,11 @@
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
-import { useRecoilState } from "recoil";
 import FormItem from "../../components/FormList/FormItem/FormItem";
-import WAFAtom from "../../store/WAF/atom";
+import useWAFStore from "../../store/useWAFStore";
 import { IWAF } from "../../types";
 import { Container, FormListContainer, Title, Wrapper } from "./WAF.styles";
 
 const WAF = () => {
-  const [state, setState] = useRecoilState(WAFAtom);
+  const { setState, ...state } = useWAFStore();
 
   const onCreate = () => {
     const formId = `form-${Math.random()}`;
@@ -23,6 +22,7 @@ const WAF = () => {
 
     setState(newState);
   };
+
   const onDragEnd = (result: DropResult) => {
     const { destination, source, draggableId } = result;
 
