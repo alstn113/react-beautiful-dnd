@@ -22,7 +22,7 @@ React.StrictMode에서는 적용이 안됨
 
 #### 상태관리 테스트
 
-      yarn add recoil
+      yarn add zustand immer
       yarn add react-router-dom
 
 참고 : disableInteractiveElementBlocking 다른 column으로는 안됨
