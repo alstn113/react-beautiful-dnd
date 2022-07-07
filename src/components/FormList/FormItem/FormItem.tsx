@@ -18,7 +18,7 @@ const FormItem = ({ formItem, index }: Props) => {
         obj[key] = state.formItems[key];
         return obj;
       }, {});
-    //test
+    //test2
 
     const newState = {
       formItems: newFormItems,
